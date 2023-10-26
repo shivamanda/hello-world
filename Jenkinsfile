@@ -5,7 +5,7 @@ pipeline {
         maven 'Maven3.9.5'
     }
     parameters {
-         string(name: 'staging_server', defaultValue: '13.232.37.20', description: 'Remote Staging Server')
+         string(name: 'staging_server', defaultValue: '172.31.36.208', description: 'Remote Staging Server')
     }
 
 stages{
@@ -22,7 +22,7 @@ stages{
         }
     stage('Deploy to Tomcat server'){
       steps{
-        deploy adapters: [tomcat9(credentialsId: 'tomcat_deployer', path: '', url: 'http://13.126.87.140:8080/')], contextPath: null, war: '**/*.war'
+        deploy adapters: [tomcat9(credentialsId: 'tomcat_deployer', path: '', url: 'http://13.235.42.204:8080/')], contextPath: null, war: '**/*.war'
       }
       
     }
