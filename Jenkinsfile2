@@ -1,5 +1,5 @@
 pipeline {
-    agent {label:Tomcat server slave}
+    agent {label 'Tomcat server slave'}
     
     tools {
         maven 'Maven3.9.5'
