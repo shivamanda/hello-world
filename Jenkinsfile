@@ -22,7 +22,7 @@ stages{
         }
     stage('Deploy to Tomcat server'){
       steps{
-        deploy adapters: [tomcat9(credentialsId: 'tomcat_deployer', path: '', url: 'http://13.235.42.204:8080/')], contextPath: null, war: '**/*.war'
+        deploy adapters: [tomcat9(credentialsId: 'tomcat_deployer', path: '', url: 'http://3.109.144.222:8080/')], contextPath: null, war: '**/*.war'
       }
       
     }
